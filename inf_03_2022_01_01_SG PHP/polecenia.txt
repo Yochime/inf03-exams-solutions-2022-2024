@@ -1,0 +1,12 @@
+zapytanie 1 
+INSERT INTO rezerwacje 
+VALUES (NULL, 1, '2017-07-04', 4, '111222333');
+
+zapytanie 2
+SELECT nazwa, cena FROM dania WHERE typ=2;
+
+zapytanie 3
+SELECT nazwa FROM dania WHERE typ=3 AND cena<15;
+
+zapytanie 4
+UPDATE pracownicy SET stanowisko='1' WHERE stanowisko='2';

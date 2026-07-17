@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>malarz</title>
+    <link rel="shortcut icon" href="obraz.png" type="image/x-icon">
+    <link rel="stylesheet" href="styl_1.css">
+    <script>
+        function oblicz() {
+            // var powierzchnia = document.getElementById("x").value;
+            var wynik = document.getElementById("wynik");
+
+            // wynik.innerHTML = "Liczba potrzebnych puszek:" + Math.ceil(powierzchnia / 4);
+            var y = 1;
+            var a1 = 1;
+            var r = 2;
+            var n = 7;
+            wynik.innerHTML = y;
+            for (i = 1; i < n; i++) {
+                var ciag = a1 + r;
+                a1 = a1 + r;
+                wynik.innerHTML += ", " + ciag;
+            }
+        }
+
+
+
+
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1>Malowanie pokoi i biur</h1>
+    </header>
+    <main>
+        <section id="left">
+            <h2>Menu</h2>
+            <ul>
+                <li><a href="mieszamy.html">Mieszamy</a></li>
+                <li><a href="cena.html">Wyceniamy</a></li>
+            </ul>
+        </section>
+        <section id="mid">
+            <h2>Zapotrzebowanie na farbę</h2>
+            <label for="powierzchnia">Powierzchnia malowania (m<sup>2</sup>)</label>
+            <input type="number" name="" id="powierzchnia">
+            <button onclick="oblicz()">Policz</button>
+            <p id="wynik"></p>
+        </section>
+        <section id="right">
+            <img src="obraz.png" alt="Próbki farb">
+        </section>
+    </main>
+    <footer>
+        <h3>MALARZ</h3>
+        <p>Stronę opracował:fghfghfgh</p>
+    </footer>
+</body>
+
+</html>
