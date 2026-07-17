@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efekty obrazu</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+
+<body>
+    <header>
+        <h2>Efekty na obrazach</h2>
+    </header>
+
+    <section id="blok1">
+        <img id="obraz1" src="pszczola.jpg" alt="pszczoła na fioletowym kwiatku">
+        <br>
+        <input type="radio" name="radio1" id="blur">
+        <label for="blur">Blur</label>
+        <br>
+        <input type="radio" name="radio1" id="sepia">
+        <label for="sepia">Sepia</label>
+        <br>
+        <input type="radio" name="radio1" id="negatyw">
+        <label for="negatyw">Negatyw</label>
+        <br>
+        <button onclick="doBloku1()">Zastosuj</button>
+    </section>
+
+    <section id="blok2">
+        <img id="obraz2" src="pomarancza.jpg" alt="drzewo pomarańczy">
+        <br>
+        <button onclick="doBloku21()">Kolorowy</button>
+        <button onclick="doBloku22()">Czarno-biały</button>
+    </section>
+
+    <section id="blok3">
+        <img id="obraz3" src="owoce.jpg" alt="Kosz pełen owoców">
+        <br>
+        <input type="range" name="swuakOwoce" id="swuakOwoce" min="0" max="100">
+        <br>
+        <button onclick="doBloku3()">Zastosuj</button>
+    </section>
+
+    <section id="blok4">
+        <img id="obraz4" src="zolw.jpg" alt="Żółw w wodzie"><br>
+        <input type="range" name="suwakZolw" id="suwakZolw" min="0" max="250">
+        <br>
+        <button onclick="doBloku4()">Zastosuj</button>
+    </section>
+    <footer>
+        <p>
+            <a href="http://www.css.com/" target="_blank">Zobacz inne efekty obrazu</a>
+        </p>
+        <p>Stronę wykonał</p>
+    </footer>
+    <script>
+        var obraz1 = document.getElementById('obraz1');
+        var obraz2 = document.getElementById('obraz2');
+        var obraz3 = document.getElementById('obraz3');
+        var obraz4 = document.getElementById('obraz4');
+
+        function doBloku1() {
+            var sepia = document.getElementById('sepia').checked;
+            var blur = document.getElementById('blur').checked;
+            var negatyw = document.getElementById('negatyw').checked;
+            if (sepia == true) {
+                obraz1.style.filter = 'sepia(100%)';
+            } else if (blur == true) {
+                obraz1.style.filter = 'blur(5px)';
+            } else if (negatyw == true) {
+                obraz1.style.filter = 'invert(100%)';
+            }
+        }
+
+        function doBloku21() {
+            obraz2.style.filter = 'grayscale(0)';
+        }
+        function doBloku22() {
+            obraz2.style.filter = 'grayscale(100%)';
+
+        }
+
+        function doBloku3() {
+            var swuakOwoce = document.getElementById('swuakOwoce').value;
+            obraz3.style.filter = `opacity(${swuakOwoce}%)`;
+        }
+
+        function doBloku4() {
+            var suwakZolw = document.getElementById('suwakZolw').value;
+            obraz4.style.filter = `brightness(${suwakZolw}%)`;
+        }
+    </script>
+</body>
+
+</html>
