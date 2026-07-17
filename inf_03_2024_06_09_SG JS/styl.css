@@ -1,0 +1,60 @@
+* {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	color: white;
+}
+header,
+footer {
+	background-color: Maroon;
+	text-align: center;
+	padding: 2px;
+}
+#left,
+#mid,
+#right {
+	background-color: lightsalmon;
+	height: 527px;
+	float: left;
+}
+#left,
+#right {
+	width: 15%;
+}
+#mid {
+	width: 70%;
+}
+#miniatury {
+	background-color: maroon;
+	height: 70px;
+	clear: both;
+}
+button {
+	background-color: lightsalmon;
+	color: maroon;
+	border: none;
+	font-size: 400%;
+	display: block;
+	margin: auto;
+	padding-top: 210px;
+}
+#miniatury img {
+	height: 70px;
+	animation-name: zmiana;
+	animation-duration: 4s;
+}
+@keyframes zmiana {
+	from {
+		padding-left: 50px;
+	}
+	to {
+		padding-left: 0px;
+	}
+}
+#mid img {
+	display: block;
+	margin: auto;
+	padding-top: 45px;
+}
+#mid img:hover {
+	transform: scale(120%);
+	transition: 5s;
+}

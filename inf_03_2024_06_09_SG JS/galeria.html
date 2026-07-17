@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biuro turystyczne</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+
+<body>
+    <header>
+        <h1>Zwiedzamy Polskę</h1>
+    </header>
+    <section id="left">
+        <button onclick="previous()">&lt;</button>
+    </section>
+    <section id="mid">
+        <img id="aktywneZdjecie" src="1.jpg" alt="Aktywne zdjęcie">
+    </section>
+    <section id="right"">
+        <button onclick=" next()">&gt;</button>
+    </section>
+    <section id="miniatury">
+        <img id="p1" src="1.jpg" alt="Gdańsk">
+        <img id="p2" src="2.jpg" alt="Kraków">
+        <img id="p3" src="3.jpg" alt="Niedzica">
+        <img id="p4" src="4.jpg" alt="Pieniny">
+        <img id="p5" src="5.jpg" alt="Szklarka Poręba">
+        <img id="p6" src="6.jpg" alt="Tatry">
+        <img id="p7" src="7.jpg" alt="Wrocław">
+    </section>
+    <footer>
+        <h3>Autorem galerii jest:</h3>
+        <p>Numer</p>
+        <a href="http://pixabay.caom" target="_blank">Więcej zdjęć</a>
+    </footer>
+    <script>
+        var aktywneZdjecie = document.getElementById('aktywneZdjecie');
+        var numer = 1;
+        function next() {
+            if (numer === 8) {
+                numer = 1;
+            }
+            aktywneZdjecie.src = numer + '.jpg';
+            numer++;
+        }
+        function previous() {
+            if (numer === 1) {
+                numer = 7;
+            }
+            aktywneZdjecie.src = numer + '.jpg';
+            numer--;
+        }
+    </script>
+</body>
+
+</html>

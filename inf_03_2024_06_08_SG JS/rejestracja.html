@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sklep - rejesracja</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+
+<body>
+    <aside>
+        <img src="obraz.png" alt="promocje">
+        <h2>Sprawdź promocje</h2>
+        <table>
+            <tr>
+                <th>co?</th>
+                <th>ile taniej?</th>
+            </tr>
+            <tr>
+                <td>ubrania</td>
+                <td>15%</td>
+            </tr>
+            <tr>
+                <td>buty</td>
+                <td>25%</td>
+            </tr>
+        </table>
+    </aside>
+    <main>
+        <header>
+            <h1>Zarejestruj się w sklepie</h1>
+        </header>
+        <section id="bGlowny">
+            <button type="button" onclick="klient()">Klient</button>
+            <button type="button" onclick="adres()">Adres</button>
+            <button type="button" onclick="kontakt()">Kontakt</button>
+
+            <section id="b1">
+                <p>Imię</p>
+                <input type="text" name="" id="imie" placeholder="Wpisz dane..." onfocusout="zmianaPaska()">
+                <p>Nazwisko</p>
+                <input type="text" name="" id="nazwisko" onfocusout="zmianaPaska()">
+                <p>Data urodzenia</p>
+                <input type="date" name="" id="data" onfocusout="zmianaPaska()">
+            </section>
+
+            <section id="b2">
+                <p>Ulica</p>
+                <input type="text" name="" id="ulica" onfocusout="zmianaPaska()">
+                <p>Numer</p>
+                <input type="number" name="" id="numer" onfocusout="zmianaPaska()">
+                <p>Miasto</p>
+                <input type="text" name="" id="miasto" onfocusout="zmianaPaska()">
+            </section>
+
+            <section id="b3">
+                <p>Numer komórkowy</p>
+                <input type="tel" name="" id="telefon" onfocusout="zmianaPaska()">
+                <br>
+                <input type="checkbox" name="akcept" id="akcept" onfocusout="zmianaPaska()"><label
+                    for="akcept">Akceptuje RODO</label>
+                <br>
+                <button type="button" onclick="zatwierdzenie()">Zatwierdź dane</button>
+            </section>
+        </section>
+        <section id="postep">
+            <section id="pasek"></section>
+        </section>
+    </main>
+    <footer>
+        <h4>Rejestracje do sklepu wykonał</h4>
+    </footer>
+    <script>
+        var b1 = document.getElementById('b1');
+        var b2 = document.getElementById('b2');
+        var b3 = document.getElementById('b3');
+
+        function klient() {
+            b1.style.display = 'block';
+            b2.style.display = 'none';
+            b3.style.display = 'none';
+            pasek.style.width = ''
+        }
+        function adres() {
+            b1.style.display = 'none';
+            b2.style.display = 'block';
+            b3.style.display = 'none';
+        }
+        function kontakt() {
+            b1.style.display = 'none';
+            b2.style.display = 'none';
+            b3.style.display = 'block';
+        }
+
+        var progres = 4;
+        var pasek = document.getElementById('pasek');
+        function zmianaPaska() {
+            pasek.style.width = progres + '%';
+            progres += 12;
+            if (progres > 100) {
+                progres = 100;
+            }
+        }
+
+        function zatwierdzenie() {
+            var imie = document.getElementById('imie').value;
+            var nazwisko = document.getElementById('nazwisko').value;
+            var data = document.getElementById('data').value;
+            var ulica = document.getElementById('ulica').value;
+            var miasto = document.getElementById('miasto').value;
+            var numer = document.getElementById('numer').value;
+            var telefon = document.getElementById('telefon').value;
+            var akcept = document.getElementById('akcept').value;
+            console.log(imie + ', ' + nazwisko + ', ' + data + ', ' + ulica + ', ' + numer + ', ' + miasto + ', ' + telefon + ', ' + akcept + ',');
+        }
+    </script>
+</body>
+
+</html>

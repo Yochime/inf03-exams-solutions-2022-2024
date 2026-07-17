@@ -1,0 +1,13 @@
+CREATE DATABASE wycieczki;
+
+SELECT miejsce, liczbaDni FROM wycieczki WHERE cena<1000;
+
+SELECT liczbaDni, AVG(cena) AS 'sredniaCena' 
+FROM wycieczki 
+GROUP BY liczbaDni;
+
+SELECT miejsce, nazwa 
+FROM zdjecia, wycieczki 
+WHERE zdjecia.Wycieczki_id=wycieczki.id AND cena>500;
+
+CREATE USER ewa@localhost IDENTIFIED BY 'Ewa!Ewa';

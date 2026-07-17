@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nasz zespół</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+
+<body>
+    <header>
+        <section id="baner1">
+            <img src="logo.png" alt="logo firmy">
+        </section>
+        <section id="baner2">
+            <h1>Nasz zespół</h1>
+        </section>
+    </header>
+    <main>
+        <section class="karta" id="karta1">
+            <img src="osoba1.jpg" alt="Dyrektor">
+            <h2>Krzysztof Dobromilski</h2>
+            <h3>Dyrektor</h3>
+            <p>Firma logistyczna była jego marzeniem. Zrealizował je 10 lat temu. Nasza firma prosperuje dzięki
+                Krzysztofowi</p>
+            <p>telefon: 111222333</p>
+            <h5><a href="mailto:Krzysztof.Dobromilski@firma.pl">Kontakt</a></h5>
+        </section>
+        <section class="karta" id="karta2">
+            <img src="osoba2.jpg" alt="Kierownik logistyków">
+            <h2>Joanna Trojanowska</h2>
+            <h3>Kierownik logistyków</h3>
+            <p>Od początku firmy z nami. Wie jak zorganizować pracę swoich logistyków aby wszystko było na czas</p>
+            <p>telefon: 222333444</p>
+            <h5><a href="mailto:Joanna.Trojanowska@firma.pl">Kontakt</a></h5>
+        </section>
+        <section class="karta" id="karta3">
+            <img src="osoba3.jpg" alt="Kadry">
+            <h2>Ewa Nowak</h2>
+            <h3>Księgowość i kadry</h3>
+            <p>Od lat finanse powierzamy niezawodnej Ewie. Twardą ręką trzyma kasę i dba o wszystkich pracowników</p>
+            <p>telefon: 333444555</p>
+            <h5><a href="mailto:Ewa.Nowak@firma.pl">Kontakt</a></h5>
+        </section>
+    </main>
+    <blockquote>
+        <section id="cytat1" onclick="cytat1f()">
+            <em>"Każdego dnia stawiam sobie nieosiągalne wyzwania i próbuję je wykonać" <p>- Krzysztof</p></em>
+        </section>
+        <section id="cytat2" onclick="cytat2f()">
+            <em>"Nie bój się porażek, im więcej ich rozwiążesz, tym szybciej osiągniesz cel" <p>- Joanna</p> </em>
+        </section>
+        <section id="cytat3" onclick="cytat3f()">
+            <em>"Niezadowolony pracownik jest dla mnie źródłem nauki" <p>- Ewa</p> </em>
+        </section>
+    </blockquote>
+    <footer>Stronę wykonał</footer>
+    <script>
+        var cytat1 = document.getElementById('cytat1');
+        var cytat2 = document.getElementById('cytat2');
+        var cytat3 = document.getElementById('cytat3');
+        function cytat1f() {
+            cytat1.style.display = 'none';
+            cytat2.style.display = 'block';
+        }
+        function cytat2f() {
+            cytat2.style.display = 'none';
+            cytat3.style.display = 'block';
+        }
+        function cytat3f() {
+            cytat3.style.display = 'none';
+            cytat1.style.display = 'block';
+        }
+    </script>
+</body>
+
+</html>
