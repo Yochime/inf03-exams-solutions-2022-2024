@@ -1,0 +1,65 @@
+* {
+	font-family: garamond;
+}
+
+header {
+	background-color: tomato;
+	color: white;
+	text-align: center;
+	width: 80%;
+	height: 80px;
+	float: left;
+}
+main {
+	width: 80%;
+	height: 600px;
+	float: left;
+}
+aside {
+	background-color: coral;
+	width: 20%;
+	height: 680px;
+	float: right;
+}
+footer {
+	background-color: tomato;
+	color: white;
+	text-align: center;
+	clear: both;
+}
+img {
+	border-radius: 50%;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+#chat {
+	border: 1px solid tomato;
+	margin: 15px;
+	height: 470px;
+	overflow: scroll;
+}
+.jola,
+.krzys {
+	border-radius: 5px;
+	width: 90%;
+	height: 70px;
+	margin: 2%;
+	padding: 3px;
+}
+.jola {
+	background-color: #eee;
+	display: flex;
+	justify-content: flex-start;
+}
+.krzys {
+	background-color: #ccc;
+	display: flex;
+	justify-content: flex-end;
+	text-align: right;
+}
+button {
+	background-color: tomato;
+	border: 1px solid darkred;
+	padding: 5px;
+	font-weight: bolder;
+}

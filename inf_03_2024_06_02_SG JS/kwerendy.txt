@@ -1,0 +1,14 @@
+CREATE DATABASE chat;
+
+INSERT INTO logowanie (id, nick, haslo) 
+VALUES (3,'Jeremi', 'Jer123');
+
+SELECT FLOOR(AVG(YEAR(rokUr))) AS 'Średni rok urodzenia' FROM uczestnicy;
+
+SELECT imie, nazwisko, nick, haslo 
+FROM uczestnicy, logowanie
+WHERE uczestnicy.logowanie_id=logowanie.id AND imie LIKE 'J%';
+
+CREATE USER 'uczestnik'@'localhost' IDENTIFIED BY 'Ucz123&';
+
+GRANT SELECT, UPDATE ON uczestnicy.* TO 'uczestnik'@'localhost';

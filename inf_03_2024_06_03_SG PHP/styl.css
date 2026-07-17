@@ -1,0 +1,52 @@
+* {
+	font-family: Georgia;
+}
+#baner1,
+#baner2 {
+	background-color: navy;
+	color: white;
+	text-align: center;
+	height: 100px;
+	width: 50%;
+	float: left;
+}
+menu {
+	background-color: navy;
+	padding: 20px;
+}
+.wybor {
+	color: silver;
+	margin: 50px;
+}
+.wybor:hover {
+	color: white;
+	text-decoration: underline;
+}
+#blokL,
+#blokR {
+	background-color: azure;
+	height: 550px;
+	float: left;
+}
+#blokL {
+	width: 70%;
+}
+#blokR {
+	width: 30%;
+}
+footer {
+	background-color: navy;
+	color: white;
+	clear: both;
+}
+table {
+	border: 1px solid navy;
+	margin: auto;
+	width: 70%;
+}
+tr:hover {
+	background-color: skyblue;
+}
+#blokR img {
+	width: 90%;
+}

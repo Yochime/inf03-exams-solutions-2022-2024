@@ -1,0 +1,14 @@
+SELECT nazwa FROM marki;
+
+SELECT model, rocznik, przebieg, paliwo, cena, zdjecie 
+FROM samochody
+WHERE id=10;
+
+SELECT nazwa, model, rocznik, cena, zdjecie
+FROM samochody, marki
+WHERE samochody.marki_id=marki.id AND wyrozniony=1 
+LIMIT 4;
+
+SELECT model, cena, zdjecie, nazwa
+FROM samochody, marki
+WHERE samochody.marki_id=marki.id AND nazwa='Audi'
