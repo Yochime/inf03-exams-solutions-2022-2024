@@ -1,0 +1,14 @@
+kw1.
+INSERT INTO czytelnicy VALUES (NULL, 'Ewelina', 'Romanowska', '56677');
+
+k2.
+SELECT imie, nazwisko FROM czytelnicy ORDER BY nazwisko ASC;
+
+kw3.
+SELECT tytul FROM ksiazki, autorzy
+WHERE ksiazki.id_autor=autorzy.id AND nazwisko='Sienkiewicz';
+
+kw4.
+SELECT nazwisko, COUNT(tytul) AS ile_tytulow FROM ksiazki, autorzy
+WHERE ksiazki.id_autor=autorzy.id
+GROUP BY nazwisko

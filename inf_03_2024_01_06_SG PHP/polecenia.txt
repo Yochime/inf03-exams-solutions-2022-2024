@@ -1,0 +1,15 @@
+CREATE DATABASE podroze
+
+zapytanie 1
+SELECT nazwaPliku, podpis FROM zdjecia ORDER BY podpis ASC;
+
+zapytanie 2
+SELECT cel, dataWyjazdu FROM wycieczki
+WHERE dostepna=0;
+
+zapytanie 3
+SELECT cel, cena, podpis FROM wycieczki, zdjecia
+WHERE wycieczki.zdjecia_id=zdjecia.id AND cena>1300;
+
+zapytanie 4
+DROP TABLE uzytkownik

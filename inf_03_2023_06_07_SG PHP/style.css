@@ -1,0 +1,57 @@
+body {
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header,
+footer {
+	background-color: saddlebrown;
+	color: white;
+	padding: 3px;
+	text-align: center;
+}
+
+aside {
+	background-color: tan;
+	height: 400px;
+	width: 40%;
+}
+
+main {
+	background-color: wheat;
+	width: 20%;
+	height: 400px;
+}
+
+img {
+	margin: 20px;
+	float: right;
+}
+
+h4 {
+	text-align: center;
+}
+
+input {
+	margin: 5px;
+}
+
+li:hover {
+	background-color: sienna;
+	color: white;
+}
+
+#left {
+	float: left;
+}
+
+#mid {
+	float: left;
+}
+
+#right {
+	float: left;
+}
+
+footer {
+	clear: both;
+}

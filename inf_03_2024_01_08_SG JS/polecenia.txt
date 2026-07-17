@@ -1,0 +1,16 @@
+create DATABASE fryzjer
+
+zapytanie 1 
+SELECT imie, nazwisko, stanowisko FROM kadra 
+WHERE stanowisko='fryzjer' or stanowisko='stylista'
+
+zapytannie 2
+SELECT COUNT(*), cena FROM uslugi 
+WHERE rodzaj=2 ORDER BY cena LIMIT 1
+
+zapytanie 3
+SELECT nazwa, imie FROM uslugi, kadra WHERE kadra.id = uslugi.kadra_id and uslugi.rodzaj = 2;
+
+zapytanie 4
+ALTER TABLE uslugi
+ADD opinia TEXT;

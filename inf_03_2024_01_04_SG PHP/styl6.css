@@ -1,0 +1,40 @@
+body {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header {
+	background-color: #6f79a8;
+	color: white;
+	height: 140px;
+	display: flex;
+}
+
+#first {
+	width: 30%;
+	float: left;
+}
+
+#second {
+	width: 70%;
+	float: left;
+}
+
+div {
+	background-color: #9fa8da;
+	width: 160px;
+	height: 85px;
+	margin: 5px;
+	border: 1px solid black;
+	overflow: hidden;
+}
+
+footer {
+	background-color: #6f79a8;
+	color: white;
+	padding: 5px;
+	text-align: right;
+}
+
+h6 {
+	text-align: center;
+}

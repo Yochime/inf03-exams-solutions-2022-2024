@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fryzjerstwo</title>
+    <link rel="stylesheet" href="styl8.css">
+    <script>
+        function pro() {
+            var krotkie = document.getElementById("krotkie").checked;
+            var srednie = document.getElementById("srednie").checked;
+            var poldlugie = document.getElementById("poldlugie").checked;
+            var dlugie = document.getElementById("dlugie").checked;
+
+            var wynik = document.getElementById("wynik");
+
+
+            if (krotkie == true) {
+                wynik.innerHTML = "15"
+            } else if (poldlugie == true) {
+                wynik.innerHTML = "30"
+            } else if (srednie == true) {
+                wynik.innerHTML = "20"
+            } else if (dlugie == true) {
+                wynik.innerHTML = "40"
+            } else {
+                wynik.innerHTML = "Wybierz promocję"
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <main>
+        <section id="lewy1">
+            <a href="index.html">
+                <h1>SALON FRYZJERSKI</h1>
+            </a>
+        </section>
+        <section id="lewy2">
+            <h2>promołszyn</h2>
+            <input type="radio" name="dlugosc" id="krotkie">
+            <label for="krotkie">krótkie</label>
+            <br>
+            <input type="radio" name="dlugosc" id="srednie">
+            <label for="srednie">średnie</label>
+            <br>
+            <input type="radio" name="dlugosc" id="poldlugie">
+            <label for="poldlugie">półdługie</label>
+            <br>
+            <input type="radio" name="dlugosc" id="dlugie">
+            <label for="dlugie">długie</label>
+            <br>
+            <input type="submit" onclick="pro()" value="Odkryj promocję">
+            <br>
+            <p id="wynik"></p>
+        </section>
+        <section id="lewy3">
+            <p>
+                Witaj! Miło nam, że odwiedziłeś nasz salon. Sprawdź promocje!
+            </p>
+            <h4>Kontakt: 444 555 666</h4>
+        </section>
+    </main>
+    <aside>
+        <section id="prawy1"><a href="fryzura.html">
+                <h4>
+                    Ceny strzyżenia
+                </h4>
+                <table>
+                    <tr>
+                        <th>Długość włosów</th>
+                        <th>cena</th>
+                    </tr>
+
+                    <tr>
+                        <td>krótkie</td>
+                        <td>25</td>
+                    </tr>
+
+                    <tr>
+                        <td>średnie</td>
+                        <td>30</td>
+                    </tr>
+
+                    <tr>
+                        <td>półdługie</td>
+                        <td>40</td>
+                    </tr>
+
+                    <tr>
+                        <td>długie</td>
+                        <td>50</td>
+                    </tr>
+                </table>
+            </a></section>
+        <section id="prawy2">
+            <img src="obraz1.jpg" alt="fryzjerka">
+        </section>
+    </aside>
+    <footer>
+        <p>Autor: </p>
+    </footer>
+</body>
+
+</html>
